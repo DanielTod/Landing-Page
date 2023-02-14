@@ -2,10 +2,11 @@ body {
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
-    
     margin: 0px;
 
 }
+
+/* To create a column for the content with background color to extend to edge */
 
 .header,
 .hero,
@@ -26,6 +27,9 @@ body {
     padding: 0px 10px;
 }
 
+
+/* Shared colors and sizes */
+
 .header, .hero {
     background-color: #1f2937;
     color: #f9faf8;
@@ -36,6 +40,9 @@ body {
     color: #e5e7eb;
     font-size: 18px;
 }
+
+
+/* Header styling */
 
 .header-container {
     flex: 1;
@@ -80,7 +87,10 @@ body {
     margin: 0px;
 }
 
-/* wider screen */
+
+/*  viewport responsiveness
+
+    wider screen */
 @media (min-width: 700px) {
     .hero-text {
         flex: 1 1 auto;
@@ -106,12 +116,15 @@ body {
     }
 }
 
+/* Button styling */
+
 button {
     background-color: #3882f6;
     color: #f9faf8;
     padding: 5px 22px;
     border-radius: 5px;
     border-style: solid;
+    border-color: transparent;
 }
 
 button:hover {
@@ -127,5 +140,19 @@ button:hover {
 }
 
 .sign-up-box button:active {
-    border-color: black;
+    border-color: transparent;
+}
+
+/* Info / card styling */
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card img {
+    max-width: 50px;
+    border-color: #3882f6;
+    border-style: solid;
 }
