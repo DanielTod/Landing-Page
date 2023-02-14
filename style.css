@@ -106,3 +106,26 @@ body {
     }
 }
 
+button {
+    background-color: #3882f6;
+    color: #f9faf8;
+    padding: 5px 22px;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+button:hover {
+    background-color: #5c96f3;
+}
+
+.hero button:active {
+    border-color: #e5e7eb;
+}
+
+.sign-up-box button {
+    border-color: #f9faf8;
+}
+
+.sign-up-box button:active {
+    border-color: black;
+}
