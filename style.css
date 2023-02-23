@@ -1,5 +1,28 @@
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    src: url('font/roboto-regular-webfont.woff') format('woff');
+    src: url('font/roboto-regular-webfont.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    src: url('font/roboto-bold-webfont.woff') format('woff');
+    src: url('font/roboto-bold-webfont.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 200;
+    src: url('font/roboto-lightitalic-webfont.woff') format('woff');
+    src: url('font/roboto-lightitalic-webfont.woff2') format('woff2');
+}
+
+
 body {
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     margin: 0px;
@@ -11,8 +34,8 @@ body {
 .header,
 .hero,
 .info,
-.quote,
-.sign-up,
+.quote-container,
+.sign-up-container,
 .footer {
     display: flex;
     justify-content: center;
@@ -21,8 +44,7 @@ body {
 .header-container, 
 .hero-container, 
 .info-container, 
-.quote-container, 
-.sign-up-container {
+.sign-up-box {
     max-width: 1000px;
     padding: 0px 10px;
 }
@@ -71,6 +93,8 @@ body {
     align-items: center;
     gap: 20px;
 }
+
+/* Hero banner styling */
 
 .hero-container {
     display: flex;
@@ -123,6 +147,7 @@ body {
 button {
     background-color: #3882f6;
     color: #f9faf8;
+    min-width: 95px;
     padding: 5px 22px;
     border-radius: 5px;
     border-style: solid;
@@ -155,6 +180,7 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 80px;
 }
 
 .info-container h2 {
@@ -188,4 +214,69 @@ button:hover {
 
 .card p {
     text-align: center;
+}
+
+
+/* Styling for inspiring quote */
+
+.quote-container {
+    justify-content: center;
+    align-items: center;
+    color: #1f2937;
+    background-color: #e5e7eb;
+    font-size: 36px;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.quote-box {
+    max-width: 800px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Quote-box responsiveness for narrower screen */
+
+@media (max-width: 915px) {
+    .quote-box {
+        max-width: auto;
+        padding: 50px 50px;
+    }
+}
+
+.quote-author {
+    text-align: end;
+}
+
+
+/* Sign-up Styling */
+
+.sign-up-container {
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-box {
+    background-color: #3882f6;
+    margin: 50px 10px;
+    padding: 30px 80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.sign-up-box > * {
+    flex: 1 1 auto;
+}
+
+.sign-up-text p {
+    margin: 0px;
+    color: #e7e7e7;
+}
+
+#sign-up-header {
+    font-size: 20px;
+    color: #f9faf8;
 }
