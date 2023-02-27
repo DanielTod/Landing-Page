@@ -43,7 +43,7 @@ body {
 
 .header-container, 
 .hero-container, 
-.info-container, 
+.info-container,
 .sign-up-box {
     max-width: 1000px;
     padding: 0px 10px;
@@ -167,8 +167,8 @@ body {
      }
     
     .hero-container img {
-        flex: 1 0 0;
-        width: 300px;
+        flex: 1 1 0;
+        width: 100%;
     }
 }
 
@@ -177,8 +177,8 @@ body {
 button {
     background-color: #3882f6;
     color: #f9faf8;
-    min-width: 95px;
-    padding: 5px 22px;
+    min-width: 110px;
+    padding: 5px 26px;
     border-radius: 5px;
     border-style: solid;
     border-color: transparent;
@@ -274,8 +274,14 @@ button:hover {
     }
 }
 
+.quote {
+    margin-bottom: 10px;
+}
+
 .quote-author {
     text-align: end;
+    font-weight: 900;
+    margin-top: 10px;
 }
 
 
@@ -283,22 +289,31 @@ button:hover {
 
 .sign-up-container {
     justify-content: center;
-    align-items: center;
+
 }
 
 .sign-up-box {
     background-color: #3882f6;
-    margin: 50px 10px;
-    padding: 30px 80px;
+    margin: 80px 10px;
+    padding: 40px 100px;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     gap: 10px;
+    box-sizing: border-box;
+    flex: 1 1 0;
 }
 
-.sign-up-box > * {
-    flex: 1 1 auto;
+/* narrower screen */
+@media (max-width: 700px) {
+    .sign-up-box {
+        display: block;
+    }
+
+    .sign-up-text {
+        margin-bottom: 20px;
+    }
 }
 
 .sign-up-text p {
