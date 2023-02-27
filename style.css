@@ -52,7 +52,7 @@ body {
 
 /* Shared colors and sizes */
 
-.header, .hero {
+.header, .hero, .footer {
     background-color: #1f2937;
     color: #f9faf8;
 }
@@ -309,4 +309,15 @@ button:hover {
 #sign-up-header {
     font-size: 20px;
     color: #f9faf8;
+}
+
+
+/* Footer styling */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px;
+    color: #e5e7eb;
 }
